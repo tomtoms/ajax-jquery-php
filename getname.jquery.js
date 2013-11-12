@@ -7,18 +7,18 @@ $(document).ready(function(){
             type: 'POST',
             url: 'getname.ajax.php',
             data: {fname:fname, lname:lname},
-			beforeSend: function() { 
-				//EXECUTES BEFORE SENDING THE REQUEST
-				 //console.log('SENDING'); //debug
-			},
-			error: function(xhr, ajaxOptions, thrownError) {  
-				//EXECUTES UPON ERROR
-				 //console.log('ERROR'); //debug
-			},
+	    beforeSend: function() { 
+	 	//EXECUTES BEFORE SENDING THE REQUEST
+                //console.log('SENDING'); //debug
+	    },
+            error: function(xhr, ajaxOptions, thrownError) {  
+	  	//EXECUTES UPON ERROR
+	 	//console.log('ERROR'); //debug
+            },
             success: function(response){
-			   //EXECUTES UPON SUCCESS
-               //console.log(response); //debug
-               $('#response').append(response);
+	        //EXECUTES UPON SUCCESS
+                //console.log(response); //debug
+                $('#response').append(response);
             }
 
         });
