@@ -7,9 +7,17 @@ $(document).ready(function(){
             type: 'POST',
             url: 'getname.ajax.php',
             data: {fname:fname, lname:lname},
+			beforeSend: function() { 
+				//EXECUTES BEFORE SENDING THE REQUEST
+				 //console.log('SENDING'); //debug
+			},
+			error: function(xhr, ajaxOptions, thrownError) {  
+				//EXECUTES UPON ERROR
+				 //console.log('ERROR'); //debug
+			},
             success: function(response){
-               console.log(response);
-               // YOUR OWN LOGIC
+			   //EXECUTES UPON SUCCESS
+               //console.log(response); //debug
                $('#response').append(response);
             }
 
