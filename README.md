@@ -1,4 +1,4 @@
 ajax-jquery-php
 ===============
 
-Basic ajax call using jquery and php
+Basic example of an ajax call using jquery and php with a plein text/html response
